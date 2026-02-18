@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Motoko actor defining restaurant data types (Mode, Category, Neighborhood, Restaurant) and a hardcoded array of 20+ Tokyo restaurants with filtering methods by mode, category, and neighborhood.",
+  "feature_evidence.json": "Feature evidence report documenting implementation of Unsplash carousel images in RestaurantCard and logo rendering in Header components.",
+  "frontend-file-summaries.txt": "JSON summary of all frontend files describing their purpose, including App navigation, hooks for data fetching, UI components for header/footer/cards, and swipe/likes pages.",
+  "frontend/index.css": "Tailwind CSS base styles with OKLCH color system defining light/dark theme variables for black/white/gold color scheme.",
+  "frontend/index.html": "HTML entry point with DishMatch title and root div mounting the React app via main.tsx.",
+  "frontend/src/App.tsx": "Root React component managing page state (swipe/likes) and mode state (Date/Business), rendering Header, Footer, and conditional page content.",
+  "frontend/src/components/FilterSheet.tsx": "Bottom sheet component with filter controls for category, neighborhood, party size, and budget range using shadcn UI components.",
+  "frontend/src/components/Footer.tsx": "Footer displaying copyright, Caffeine.ai attribution link with UTM parameters, and heart icon in gold accent color.",
+  "frontend/src/components/Header.tsx": "Sticky header with DishMatch logo, mode toggle, and likes navigation button with gold accent styling.",
+  "frontend/src/components/ModeToggle.tsx": "Toggle button group switching between Date and Business modes with gold active state styling.",
+  "frontend/src/components/RestaurantCard.tsx": "Large card component displaying restaurant with 5-photo Unsplash carousel, navigation arrows, photo indicators, and overlay showing name, rating, location, price, and details.",
+  "frontend/src/hooks/useActor.ts": "Custom React hook that manages the backend actor instance using React Query, creating authenticated or anonymous actors based on Internet Identity state and invalidating dependent queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides Internet Identity authentication context and hooks for ICP, managing login/logout state, identity persistence via AuthClient, and delegation validation with configurable options.",
+  "frontend/src/hooks/useQueries.ts": "Defines React Query hooks for fetching restaurants by mode, category, and neighborhood from the backend actor, plus a localStorage-based likes system with add/remove mutations.",
+  "frontend/src/index.css": "Tailwind CSS configuration with custom CSS variables for theming (dark mode support), using Poppins font and OKLCH color space for design tokens.",
+  "frontend/src/main.tsx": "Application entry point that sets up React Query and Internet Identity providers, then renders the App component into the DOM.",
+  "frontend/src/pages/LikesGallery.tsx": "Displays a grid gallery of liked restaurants with remove functionality, showing an empty state with navigation to swipe screen when no likes exist.",
+  "frontend/src/pages/SwipeScreen.tsx": "Implements Tinder-style swipe interface for restaurants with filtering by category, neighborhood, and budget, featuring like/reject buttons and card navigation.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the default theme with custom colors (gold, tinder-red/green), OKLCH color system, Poppins font, and animation utilities for accordions.",
+  "project_state.json": "Project state file defining DishMatch, a Tinder-style restaurant discovery app for Tokyo with Date/Business mode toggle, swipeable cards, likes gallery, and black/white/gold design. Tracks existing features, requirements, and architectural notes including target audience (20-30s), design specs (Poppins font, specific color codes), and filtering logic for Date vs Business modes."
+}

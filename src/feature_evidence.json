@@ -1,0 +1,41 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-integrate-unsplash-placeholder-images-for-each-restaurant-s-5-photo-carousel-using-the-unsplash-source-api-format-https-source-unsplash-com-featured-restaurant-food-interior-or-similar-food-interior-photography-queries-to-ensure-high-quality-visual-content-each-restaurant-must-have-5-distinct-photo-urls-that-cycle-through-when-users-tap-left-right-on-the-card",
+      "featureTitle": "Integrate Unsplash placeholder images for each restaurant's 5-photo carousel using the Unsplash Source API format (https://source.unsplash.com/featured/?restaurant,food,interior) or similar food/interior photography queries to ensure high-quality visual content. Each restaurant must have 5 distinct photo URLs that cycle through when users tap left/right on the card.",
+      "files": [
+        "frontend/src/components/RestaurantCard.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-render-the-uploaded-gold-plate-spoon-logo-image-image-png-as-a-static-asset-in-frontend-public-assets-generated-with-the-filename-dishmatch-logo-dim-200x200-png-and-display-it-in-the-app-header-as-a-circular-icon-with-transparent-background",
+      "featureTitle": "Render the uploaded gold plate/spoon logo image (image.png) as a static asset in frontend/public/assets/generated with the filename 'dishmatch-logo.dim_200x200.png' and display it in the app header as a circular icon with transparent background.",
+      "files": [
+        "frontend/src/components/Header.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

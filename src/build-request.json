@@ -1,0 +1,90 @@
+{
+  "kind": "build_request",
+  "title": "Populate DishMatch with 50 mock Tokyo restaurants and integrate Unsplash placeholder images",
+  "projectName": "DishMatch",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "text": "Create a comprehensive mock dataset of 50 Tokyo restaurants covering diverse genres (Italian, Kaiseki, Sushi, Yakiniku, Steakhouse, French, Bars, Vegan/Casual, etc.) with each entry containing: restaurant name, mode (Date or Business), category, price range (¥ format), star rating (1-5 scale with decimals), descriptive details highlighting ambiance and ideal use case, and Tokyo neighborhood (Shibuya, Roppongi, Tokyo Station, Atago, etc.). Include the 5 provided examples (TRATTORIA CREATTA, Mortons The Steakhouse Tokyo, Daigo, Piacere, T's TanTan) and expand with 45 additional restaurants mentioned or similar to Mon cher ton ton, Signature, Nadaman, Akasaka Rikyu, Sense, ensuring balanced distribution between Date and Business modes.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-user-mock-data"
+        ],
+        "quotes": [
+          "Please use the following mock data to populate the restaurant cards",
+          "AI: Please expand this list to 50 items including Tokyo Station area spots like: Mon cher ton ton, Signature, Nadaman, Akasaka Rikyu, Sense, etc., maintaining the \"Date\" vs \"Business\" tag for each."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dataset contains exactly 50 restaurant entries",
+        "Each restaurant has all required fields: name, mode, category, price range, rating, details, neighborhood",
+        "The 5 provided examples are included with exact details",
+        "Restaurants are distributed across multiple Tokyo neighborhoods",
+        "Mode distribution is balanced between Date and Business categories",
+        "Categories include Italian, Kaiseki, Sushi, Yakiniku, Steakhouse, French, Bars, Vegan/Casual and others"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Integrate Unsplash placeholder images for each restaurant's 5-photo carousel using the Unsplash Source API format (https://source.unsplash.com/featured/?restaurant,food,interior) or similar food/interior photography queries to ensure high-quality visual content. Each restaurant must have 5 distinct photo URLs that cycle through when users tap left/right on the card.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-mock-data"
+        ],
+        "quotes": [
+          "For the images, please use high-quality placeholder food and interior photos from Unsplash (e.g., https://source.unsplash.com/featured/?restaurant,food,interior) to ensure the 5-photo carousel works."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each restaurant card displays 5 photos from Unsplash",
+        "Photos use the Unsplash Source API or similar high-quality food/interior photography",
+        "Carousel tap interaction cycles through all 5 photos correctly",
+        "Images load properly and display in the card interface"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Render the uploaded gold plate/spoon logo image (image.png) as a static asset in frontend/public/assets/generated with the filename 'dishmatch-logo.dim_200x200.png' and display it in the app header as a circular icon with transparent background.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-logo-upload"
+        ],
+        "quotes": [
+          "Use the uploaded gold plate/spoon icon as the DishMatch logo. Ensure the image is cropped into a circle with transparent background and displayed in the app header."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Logo image is stored in frontend/public/assets/generated/",
+        "Logo displays as circular icon in app header",
+        "Background is transparent",
+        "Image dimensions are 200x200 pixels"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not integrate with external APIs (Hot Pepper API, AdMob, or location services)",
+    "Use only mock data stored in the backend, no external data sources",
+    "Maintain the black/white/gold design system (70/25/5 rule) with colors #000000, #FFFFFF, and #D4AF37",
+    "Use Poppins font (Bold for titles, Regular for details)",
+    "Keep existing UI components and hooks immutable (frontend/src/hooks/, frontend/src/components/ui)",
+    "Store all restaurant data and likes in the backend using the single-actor Motoko architecture"
+  ],
+  "nonGoals": [
+    "Real GPS or geolocation functionality",
+    "Integration with Hot Pepper API or any external restaurant data APIs",
+    "AdMob or any third-party advertising network integration",
+    "Real-time location tracking or distance calculation based on GPS",
+    "User authentication beyond Internet Identity",
+    "Payment processing or reservation booking systems"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Circular gold plate and spoon logo icon with transparent background (dishmatch-logo.dim_200x200.png)"
+    ],
+    "edits": []
+  }
+}

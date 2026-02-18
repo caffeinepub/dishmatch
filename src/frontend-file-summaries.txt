@@ -1,0 +1,13 @@
+{
+  "frontend/src/App.tsx": "Main application component managing page navigation between swipe screen and likes gallery, with mode toggle state for Date/Business filtering.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching restaurants from backend and managing liked restaurants in local storage with add/remove mutations.",
+  "frontend/src/components/Header.tsx": "App header displaying DishMatch logo, mode toggle, and navigation to likes gallery with sticky positioning.",
+  "frontend/src/components/Footer.tsx": "Footer component with copyright notice and Caffeine.ai attribution link with UTM tracking parameters.",
+  "frontend/src/components/ModeToggle.tsx": "Toggle component for switching between Date and Business modes with gold accent styling.",
+  "frontend/src/components/RestaurantCard.tsx": "Large swipeable card displaying restaurant photos in a 5-image carousel with overlay showing name, rating, location, price, and details.",
+  "frontend/src/components/FilterSheet.tsx": "Bottom sheet filter panel with category, neighborhood, party size, and budget range controls.",
+  "frontend/src/pages/SwipeScreen.tsx": "Main swipe interface with restaurant cards, reject/like buttons, and filter integration.",
+  "frontend/src/pages/LikesGallery.tsx": "Grid view of all liked restaurants with remove functionality and empty state.",
+  "frontend/src/index.css": "Global styles with Poppins font import and OKLCH color system customized for black/white/gold theme.",
+  "frontend/tailwind.config.js": "Tailwind configuration with Poppins font family, custom gold/tinder colors, and extended design tokens."
+}

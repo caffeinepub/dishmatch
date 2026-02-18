@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "DishMatch: A premium restaurant discovery app for Tokyo with Tinder-style swipe interface, Date/Business mode toggle, and likes gallery. Uses black/white/gold design with mock restaurant data.",
+  "architectural_notes": [
+    "Target audience: 20-30s searching for high-end dinner/date spots in Tokyo",
+    "Design: Pure Black (#000000) background, Pure White (#FFFFFF) text, Matte Gold (#D4AF37) accents",
+    "Font: Poppins (Google Web Fonts) - Bold for titles, Regular for details",
+    "Card overlay: Restaurant name, gold star rating, distance, price range ($$$)",
+    "Reject button: Tinder Red (#FF4458), Like button: Tinder Green (#21D393)",
+    "Date Mode filters: romantic, quiet, atmospheric spots (Italian, French, Bars)",
+    "Business Mode filters: formal, spacious spots for business meetings (Kaiseki, High-end Sushi, Steakhouse)",
+    "Manual neighborhood selection instead of GPS (Shibuya, Roppongi, etc.)"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Circular gold plate and spoon logo icon with transparent background (dishmatch-logo.dim_200x200.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-tinder-style-swipeable-card-interface-for-restaurant-discovery-with-large-cards-featuring-rounded-corners-cards-should-support-left-swipe-reject-and-right-swipe-like-gestures",
+      "title": "Create a Tinder-style swipeable card interface for restaurant discovery with large cards featuring rounded corners. Cards should support left swipe (reject) and right swipe (like) gestures.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-tap-to-cycle-photo-carousel-on-each-restaurant-card-that-allows-users-to-tap-left-right-sides-of-the-card-to-cycle-through-5-restaurant-photos",
+      "title": "Implement tap-to-cycle photo carousel on each restaurant card that allows users to tap left/right sides of the card to cycle through 5 restaurant photos.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-restaurant-information-overlay-at-bottom-of-each-card-showing-restaurant-name-star-rating-in-gold-distance-and-price-range",
+      "title": "Display restaurant information overlay at bottom of each card showing restaurant name, star rating in gold, distance, and price range ($$$).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-floating-action-buttons-below-the-card-reject-button-x-icon-in-tinder-red-ff4458-and-like-button-heart-icon-in-tinder-green-21d393",
+      "title": "Add floating action buttons below the card: reject button (X icon in Tinder Red #FF4458) and like button (heart icon in Tinder Green #21D393).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-likes-gallery-page-that-displays-all-right-swiped-restaurants-in-a-grid-or-list-view-users-should-be-able-to-navigate-to-this-page-to-review-their-liked-restaurants",
+      "title": "Create a Likes Gallery page that displays all right-swiped restaurants in a grid or list view. Users should be able to navigate to this page to review their liked restaurants.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-date-business-mode-toggle-bumble-style-that-filters-restaurants-date-mode-shows-romantic-quiet-atmospheric-spots-italian-french-bars-business-dining-mode-shows-formal-spacious-reputable-spots-kaiseki-high-end-sushi-private-room-steakhouse",
+      "title": "Implement Date/Business mode toggle (Bumble-style) that filters restaurants: Date Mode shows romantic, quiet, atmospheric spots (Italian, French, Bars); Business/Dining Mode shows formal, spacious, reputable spots (Kaiseki, High-end Sushi, Private Room Steakhouse).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-filter-bottom-sheet-accessible-from-main-screen-with-inputs-for-genre-selection-sushi-yakiniku-etc-party-size-counter-budget-range-slider-for-price-per-person-and-neighborhood-selection-for-tokyo-areas-shibuya-roppongi-etc",
+      "title": "Create a filter bottom sheet accessible from main screen with inputs for: genre selection (Sushi, Yakiniku, etc.), party size counter, budget range slider for price per person, and neighborhood selection for Tokyo areas (Shibuya, Roppongi, etc.).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-black-white-gold-design-system-70-25-5-rule-pure-black-background-000000-pure-white-text-and-elements-ffffff-using-poppins-font-bold-for-titles-regular-for-details-and-matte-gold-accent-d4af37-for-star-ratings-icons-and-dishmatch-logo-text",
+      "title": "Apply black/white/gold design system (70/25/5 rule): pure black background (#000000), pure white text and elements (#FFFFFF) using Poppins font (Bold for titles, Regular for details), and matte gold accent (#D4AF37) for star ratings, icons, and DishMatch logo text.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-the-uploaded-gold-plate-spoon-icon-as-the-dishmatch-logo-ensure-the-image-is-cropped-into-a-circle-with-transparent-background-and-displayed-in-the-app-header",
+      "title": "Use the uploaded gold plate/spoon icon as the DishMatch logo. Ensure the image is cropped into a circle with transparent background and displayed in the app header.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-unsplash-placeholder-images-for-each-restaurant-s-5-photo-carousel-using-the-unsplash-source-api-format-https-source-unsplash-com-featured-restaurant-food-interior-or-similar-food-interior-photography-queries-to-ensure-high-quality-visual-content-each-restaurant-must-have-5-distinct-photo-urls-that-cycle-through-when-users-tap-left-right-on-the-card",
+      "title": "Integrate Unsplash placeholder images for each restaurant's 5-photo carousel using the Unsplash Source API format (https://source.unsplash.com/featured/?restaurant,food,interior) or similar food/interior photography queries to ensure high-quality visual content. Each restaurant must have 5 distinct photo URLs that cycle through when users tap left/right on the card.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-uploaded-gold-plate-spoon-logo-image-image-png-as-a-static-asset-in-frontend-public-assets-generated-with-the-filename-dishmatch-logo-dim-200x200-png-and-display-it-in-the-app-header-as-a-circular-icon-with-transparent-background",
+      "title": "Render the uploaded gold plate/spoon logo image (image.png) as a static asset in frontend/public/assets/generated with the filename 'dishmatch-logo.dim_200x200.png' and display it in the app header as a circular icon with transparent background.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Tinder-style swipe interface for restaurant discovery",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Date/Business mode toggle (Bumble-style) to filter restaurant types",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Likes gallery page to view all right-swiped restaurants",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Tap-to-cycle carousel for 5 restaurant photos per card",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Filter panel with genre, party size, budget, and neighborhood selection",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Black/white/gold design (70/25/5 rule) with Poppins font and gold plate logo",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Mock restaurant data for ~50 Tokyo restaurants with photos and details",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Generate and integrate mock restaurant data for approximately 50 Tokyo restaurants with details including name, genre, photos (5 per restaurant), star rating, distance, price range, neighborhood, party size capacity, and mode category (Date/Business).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Create a comprehensive mock dataset of 50 Tokyo restaurants covering diverse genres (Italian, Kaiseki, Sushi, Yakiniku, Steakhouse, French, Bars, Vegan/Casual, etc.) with each entry containing: restaurant name, mode (Date or Business), category, price range (¥ format), star rating (1-5 scale with decimals), descriptive details highlighting ambiance and ideal use case, and Tokyo neighborhood (Shibuya, Roppongi, Tokyo Station, Atago, etc.). Include the 5 provided examples (TRATTORIA CREATTA, Mortons The Steakhouse Tokyo, Daigo, Piacere, T's TanTan) and expand with 45 additional restaurants mentioned or similar to Mon cher ton ton, Signature, Nadaman, Akasaka Rikyu, Sense, ensuring balanced distribution between Date and Business modes.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "DishMatch",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Populate DishMatch with 50 mock Tokyo restaurants and integrate Unsplash placeholder images",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "summary": "Integrate Unsplash placeholder images for each restaurant's 5-photo carousel using high-quality food/interior photography queries",
+      "acceptanceCriteria": [
+        "Each restaurant card displays 5 photos from Unsplash",
+        "Photos use the Unsplash Source API or similar high-quality food/interior photography",
+        "Carousel tap interaction cycles through all 5 photos correctly",
+        "Images load properly and display in the card interface"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/RestaurantCard.tsx",
+          "operation": "modify",
+          "description": "Update the RestaurantCard component to generate 5 distinct Unsplash placeholder image URLs per restaurant using the Unsplash Source API format (https://source.unsplash.com/800x600/?restaurant,food,interior with unique seeds or query variations). Ensure the existing carousel tap interaction cycles through all 5 photos correctly by managing the current photo index state."
+        },
+        {
+          "path": "frontend/src/types/restaurant.ts",
+          "operation": "modify",
+          "description": "Add an optional photos array field (photos?: string[]) to the Restaurant type interface to support storing the 5 Unsplash image URLs. This allows the component to reference pre-generated URLs if needed while maintaining backwards compatibility with existing data structures."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Display the gold plate/spoon logo as a circular icon in the app header using the generated asset",
+      "acceptanceCriteria": [
+        "Logo image is stored in frontend/public/assets/generated/",
+        "Logo displays as circular icon in app header",
+        "Background is transparent",
+        "Image dimensions are 200x200 pixels"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Update the Header component to display the logo image from frontend/public/assets/generated/dishmatch-logo.dim_200x200.png as a circular icon. Apply CSS styling to ensure the logo appears as a circular icon with transparent background support. Use the exact workspace file path frontend/public/assets/generated/dishmatch-logo.dim_200x200.png when referencing the image asset."
+        }
+      ]
+    }
+  ]
+}
